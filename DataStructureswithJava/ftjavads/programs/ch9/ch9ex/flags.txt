@@ -1,0 +1,7 @@
+Canada				images\\canada.gif
+China					images\\china.gif
+Denmark				images\\denmark.gif
+France				images\\france.gif
+India					images\\india.gif
+United Kingdom		images\\unitedkingdom.gif
+United States		images\\unitedstates.gif
