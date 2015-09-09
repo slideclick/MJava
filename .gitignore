@@ -19,7 +19,7 @@ hs_err_pid*
 
 # eclipse specific git ignore
 *.pydevproject
-.project
+#.project
 .metadata
 bin/**
 tmp/**
@@ -38,3 +38,4 @@ local.properties
 
 # Locally stored "Eclipse launch configurations"
 *.launch
+/bin/
