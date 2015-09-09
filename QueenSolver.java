@@ -10,6 +10,7 @@ import javax.swing.*;
 
 class Queen {
 		// data fields
+	final private  int SIZE = 8;
 	private int row;
 	private int column;
 	private Queen neighbor;
@@ -30,7 +31,7 @@ class Queen {
 		}
 
 	public boolean advance() {
-		if (row < 8) {
+		if (row < SIZE) {
 			row++;
 			return findSolution();
 			}
@@ -84,19 +85,22 @@ class Queen {
 }
 
 public class QueenSolver extends JFrame {
-
-	public static void main(String [ ] args) {
+	final private  int SIZE = 8;
+	public static void main(String [ ] args)throws InterruptedException 
+	{
 		QueenSolver world = new QueenSolver();
 		world.show();
 	}
 
 	private Queen lastQueen = null;
 
-	public QueenSolver() {
+	public QueenSolver() throws InterruptedException{
 		setTitle("8 queens");
 		setSize(600, 500);
-		for (int i = 1; i <= 8; i++) {
+		for (int i = 1; i <= SIZE; i++) {
 			lastQueen = new Queen(i, lastQueen);
+			//repaint();
+			
 			lastQueen.findSolution();
 			}
 		addMouseListener(new MouseKeeper());
@@ -106,13 +110,20 @@ public class QueenSolver extends JFrame {
 	public void paint(Graphics g) {
 		super.paint(g);
 			// draw board
-		for (int i = 0; i <= 8; i++) {
+		for (int i = 0; i <= SIZE; i++) {
 			g.drawLine(50 * i + 10, 40, 50*i + 10, 440);
 			g.drawLine(10, 50 * i + 40, 410, 50*i + 40);
 		}
 		g.drawString("Click Mouse for Next Solution", 20, 470);
 			// draw queens
 		lastQueen.paint(g);
+		try{
+		Thread.sleep(1000);
+		}
+		catch( InterruptedException e)
+		{
+			;
+		}
 		}
 
 	private class CloseQuit extends WindowAdapter {
