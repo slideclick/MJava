@@ -12,7 +12,11 @@ public class Arrays
     private Arrays( ) 
     { 
     }
-    
+    public static String toString(Object[] arr)
+    {
+        System.out.println("hello World");
+        return "good";
+    }
     /**
      * Performs a search on sorted array arr.
      * If arr is not sorted, results are undefined.

@@ -1,5 +1,5 @@
-//import ds.util.Arrays;
-import weiss.util.Arrays;
+import ds.util.Arrays;
+//import weiss.util.Arrays;
 class MyClass{
 private int i ;
 public MyClass(int ii){
@@ -19,7 +19,7 @@ public class helloArray {
             a[j] = new MyClass(j);
         }
         
-        System.out.println(Arrays.toString(a));
+        System.out.println(weiss.util.Arrays.toString(a));
         
 	}
 
