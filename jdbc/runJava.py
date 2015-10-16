@@ -10,7 +10,7 @@ VALUES('100006', 'The Toy Store', '4545 53rd Street', 'Chicago', 'IL', '54545', 
     sql=sqlTemplate % args    
     stmt.addBatch(sql)  
       
-Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance()  
+#Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance()  
 url = "jdbc:sqlserver://10.175.13.170:1433;databaseName=Forta";
 con = DriverManager.getConnection(url,"sa","P"); 
 con.setAutoCommit(0)  
