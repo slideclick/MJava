@@ -1,0 +1,2 @@
+createEmployee(firstName='JOHN',midinit='M',lastName='DOE',salary=32888.55,sex='M',workdept='A01',  
+job='DESIGNER')  

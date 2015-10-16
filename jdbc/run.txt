@@ -1,0 +1,6 @@
+java -cp ".;sqljdbc4.jar" openTran
+
+run the same SQL in SSMS:
+ BEGIN TRAN;  UPDATE Sales.OrderDetails    SET unitprice = unitprice + 1.00  WHERE productid = 2;
+
+then run java, you will see suspend 
